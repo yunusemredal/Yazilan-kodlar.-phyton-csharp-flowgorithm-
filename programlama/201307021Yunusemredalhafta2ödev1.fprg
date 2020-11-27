@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Win7"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-10-15 12:57:20 "/>
+        <attribute name="created" value="V2luNztXSU43LUJJTEdJU0FZQVI7MjAyMC0xMC0xNTsiMTE6MjM6MDggIjsyNjE5"/>
+        <attribute name="edited" value="V2luNztXSU43LUJJTEdJU0FZQVI7MjAyMC0xMC0xNTsiMTI6NTc6MjAgIjsyOzI3MzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="isim ,soyad ve cinsiyeti  input al&#305;p do&#287;du&#287;u y&#305;l&#305; soracaz ve 2020 &#231;&#305;kar&#305;p ald&#305;m&#305;z t&#252;m bilgileri ekrana bast&#305;racaz.  "/>
+            <declare name="ADSOYAD" type="String" array="False" size=""/>
+            <declare name="Cinsiyet" type="String" array="False" size=""/>
+            <declare name="do&#287;umy&#305;l&#305;" type="Integer" array="False" size=""/>
+            <declare name="yas" type="Integer" array="False" size=""/>
+            <output expression="&quot;l&#220;TFEN ADINIZI VE SOYADINIZI G&#304;R&#304;N&#304;Z..&quot;" newline="True"/>
+            <input variable="ADSOYAD"/>
+            <output expression="&quot;L&#220;TFEN C&#304;NS&#304;YET&#304;N&#304;Z&#304; BEL&#304;RT&#304;N&#304;Z...&quot;" newline="True"/>
+            <input variable="Cinsiyet"/>
+            <output expression="&quot;L&#220;TFEN DO&#286;DU&#286;UNUZ YILI G&#304;R&#304;N&#304;Z...&quot;" newline="True"/>
+            <input variable="do&#287;umy&#305;l&#305;"/>
+            <assign variable="yas" expression="2020-do&#287;umy&#305;l&#305;"/>
+            <comment text="hocam ayn&#305; c&#252;mle i&#231;inde basmak yerine alt altta basmak istedim ondan b&#246;yle bir yol izledim ."/>
+            <output expression="&quot;&#304;sminiz:&quot;&amp;ADSOYAD" newline="True"/>
+            <output expression="&quot;Ya&#351;&#305;n&#305;z:&quot;&amp;yas" newline="True"/>
+            <output expression="&quot;Cinsiyetiniz:&quot;&amp;Cinsiyet" newline="True"/>
+            <output expression="&quot;Verdi&#287;iniz bilgiler i&#231;in te&#351;ekk&#252;r ederiz&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

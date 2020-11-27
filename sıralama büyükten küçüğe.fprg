@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Win7"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-26 10:39:37 "/>
+        <attribute name="created" value="V2luNztXSU43LUJJTEdJU0FZQVI7MjAyMC0xMS0yNjsiMDQ6MDg6NTMgIjsyNjI3"/>
+        <attribute name="edited" value="V2luNztXSU43LUJJTEdJU0FZQVI7MjAyMC0xMS0yNjsiMTA6Mzk6MzcgIjs0OzI3NDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Kullan&#305;c&#305; taraf&#305;ndan girilen N adet say&#305; i&#231;erisinde en b&#252;y&#252;k ve en k&#252;&#231;&#252;k olan&#305; bulup ekrana yazd&#305;ran bilgisayar "/>
+            <declare name="n, a, c, d, i, max, min" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ka&#231; tane say&#305;y&#305; s&#305;ralamak istedi&#287;inizi yaz&#305;n&#305;z(say&#305; ile ) : &quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Say&#305;lar&#305; giriniz&quot;" newline="True"/>
+            <declare name="b" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a"/>
+                <assign variable="b[i]" expression="a"/>
+            </for>
+            <assign variable="min" expression="b[0]"/>
+            <assign variable="max" expression="b[0]"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="c" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="min&gt;b[i]">
+                        <then>
+                            <assign variable="min" expression="b[i]"/>
+                        </then>
+                        <else>
+                            <if expression="max&lt;b[i]">
+                                <then>
+                                    <assign variable="max" expression="b[i]"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="b[i]&gt;b[c]">
+                        <then>
+                            <assign variable="d" expression="b[c]"/>
+                            <assign variable="b[c]" expression="b[i]"/>
+                            <assign variable="b[i]" expression="d"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;B&#252;y&#252;kten k&#252;&#231;&#252;&#287;e s&#305;ralanm&#305;&#351; say&#305;lar&#305;n&#305;z a&#351;adaki gibidir : &quot;" newline="True"/>
+            <output expression="&quot;En b&#252;y&#252;k say&#305;: &quot;&amp;max" newline="True"/>
+            <output expression="&quot;En k&#252;&#231;&#252;k say&#305;: &quot;&amp;min" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="b[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
